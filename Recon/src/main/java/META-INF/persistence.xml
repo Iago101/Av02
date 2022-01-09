@@ -1,0 +1,20 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd" version="2.2">
+<!--  Definir a unidade de persistencia  -->
+<persistence-unit name="bancodadosPU">
+<!--  Especificar o provedor ORM  -->
+<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+<!--  Entidades Mapeadas  -->
+<class>recon.Receita</class>
+<!--  Propriedades da Conexão  -->
+<properties>
+<property name="javax.persistence.jdbc.Driver" value="com.mysql.cj.jdbc.Driver"/>
+<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/teste"/>
+<property name="javax.persistence.jdbc.user" value="root"/>
+<property name="javax.persistence.jdbc.password" value=""/>
+<!--  Configurações do Hibernate  -->
+<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
+<property name="hibernate.show_sql" value="true"/>
+<property name="hibernate.format_sql" value="true"/>
+</properties>
+</persistence-unit>
+</persistence>
